@@ -1,0 +1,46 @@
+body {
+    font-family: cursive;
+    margin: 0;
+}
+
+.app {
+    height: 100%; /* default height & width is 100%*/
+    width: 100%; /* specifically giving height & width b'coz we will use position = absolute*/
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+}
+
+.slideshow {
+    flex: 1;
+    position: relative;
+    height: 500px; /* why?*/
+    /* width: 400px; */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: slategray;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0;
+    transform: scale(1);
+    transition: all .9s ease-out;
+}
+
+.slide:nth-last-child(2) {
+    opacity: 1;
+    transform: scale(1.08); /*zoom*/
+}
+
+#breed {
+    margin: 25px;
+}
